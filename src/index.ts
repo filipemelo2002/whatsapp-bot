@@ -10,6 +10,7 @@ import chromedriver from 'chromedriver';
     .build();
   try {
     await driver.get('https://web.whatsapp.com/');
+    await driver.wait(until.elementLocated(By.id('pane-side')));
   } finally {
     await driver.quit();
   }
